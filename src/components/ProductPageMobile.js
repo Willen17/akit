@@ -2,7 +2,7 @@ import VideoPic from "../assets/videoProdPic.svg";
 import WebsitePic from "../assets/websitePic.svg";
 import DesignPic from "../assets/designPic.svg";
 
-export default function ProductPage() {
+export default function ProductPageMobile() {
   return (
     <div
       style={{
@@ -13,13 +13,13 @@ export default function ProductPage() {
         color: "#ffffff",
       }}
     >
-      <p style={{ fontSize: "2rem", marginTop: 0 }}>
+      <p style={{ fontSize: "1rem", marginTop: 0 }}>
         Beyond your expectations.
       </p>
       <p
         style={{
           textAlign: "right",
-          fontSize: "1.4rem",
+          fontSize: ".8rem",
           fontWeight: "lighter",
           maxWidth: "80vw",
           marginTop: 0,
@@ -37,64 +37,90 @@ export default function ProductPage() {
       <div
         style={{
           display: "flex",
-          justifyContent: "flex-start",
-          width: "80%",
+          flexDirection: "column",
+          rowGap: "2rem",
           marginTop: "2rem",
-          columnGap: "5%",
         }}
       >
-        <div style={{ position: "relative", marginTop: "5%" }}>
+        <div
+          style={{
+            position: "relative",
+            marginTop: "5%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <p
             style={{
-              fontSize: "2vw",
+              fontSize: "2rem",
               position: "absolute",
-              left: "10%",
+              left: "30%",
               top: "15%",
             }}
           >
             video <br />
             production
           </p>
-          <img
-            src={VideoPic}
-            alt="Video Production"
-            style={{ width: "20vw" }}
-          />
-          <p style={{ maxWidth: "60%", fontSize: "1.2rem" }}>
+          <img src={VideoPic} alt="Video Production" style={{ width: "50%" }} />
+          <p style={{ maxWidth: "40%", fontSize: ".8rem", marginLeft: "-10%" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
             tellus nunc risus ipsum ornare. At lectus sed vitae interdum.
           </p>
         </div>
-        <div style={{ position: "relative" }}>
-          <p style={{ fontSize: "2vw", position: "absolute", left: "15%" }}>
+        <div
+          style={{
+            position: "relative",
+            marginTop: "5%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "2rem",
+              position: "absolute",
+              left: "30%",
+              top: "10%",
+            }}
+          >
             quality <br />
             websites
           </p>
           <img
             src={WebsitePic}
             alt="Man coding a website"
-            style={{ width: "20vw" }}
+            style={{ width: "50%" }}
           />
-          <p style={{ maxWidth: "60%", fontSize: "1.2rem" }}>
+          <p style={{ maxWidth: "40%", fontSize: ".8rem", marginLeft: "-10%" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
             viverra pellentesque lectus aliquam, tincidunt dui. Enim sit velit
             ornare.
           </p>
         </div>
-        <div style={{ position: "relative", marginTop: "5%" }}>
+        <div
+          style={{
+            position: "relative",
+            marginTop: "5%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <p
             style={{
-              fontSize: "2vw",
+              fontSize: "2rem",
               position: "absolute",
-              left: "10%",
-              top: "15%",
+              left: "30%",
+              top: "10%",
             }}
           >
             graphic <br />
             design
           </p>
-          <img src={DesignPic} alt="Design example" style={{ width: "20vw" }} />
-          <p style={{ maxWidth: "60%", fontSize: "1.2rem" }}>
+          <img src={DesignPic} alt="Design example" style={{ width: "50%" }} />
+          <p style={{ maxWidth: "40%", fontSize: ".8rem", marginLeft: "-10%" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
             viverra pellentesque lectus aliquam, tincidunt dui. Enim sit velit
             ornare.

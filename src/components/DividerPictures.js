@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
 import DividerPics from "../assets/dividerPics.png";
 import Triangle from "../assets/whiteTriangle.svg";
 
 export default function DividerPictures() {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 1024px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 1024px)")
+      .addEventListener("change", (e) => setIsMobile(e.matches));
+  }, []);
   return (
     <div
       style={{
@@ -49,21 +59,39 @@ export default function DividerPictures() {
       >
         Dreamer
       </p>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
+      {!isMobile ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
 
-          columnGap: "1rem",
-          color: "#ffffff",
-          position: "absolute",
-          bottom: 0,
-          right: "5%",
-        }}
-      >
-        <img src={Triangle} alt="A triangle" style={{ height: "3vw" }} />
-        <p style={{ fontSize: "3vw" }}>products</p>
-      </div>
+            columnGap: "1rem",
+            color: "#ffffff",
+            position: "absolute",
+            bottom: 0,
+            right: "5%",
+          }}
+        >
+          <img src={Triangle} alt="A triangle" style={{ height: "3rem" }} />
+          <p style={{ fontSize: "3rem" }}>products</p>
+        </div>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+
+            columnGap: "1rem",
+            color: "#ffffff",
+            position: "absolute",
+            bottom: "-1rem",
+            right: "5%",
+          }}
+        >
+          <img src={Triangle} alt="A triangle" style={{ height: "1.5rem" }} />
+          <p style={{ fontSize: "1.5rem" }}>products</p>
+        </div>
+      )}
     </div>
   );
 }

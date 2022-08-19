@@ -5,7 +5,7 @@ import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
 import Triangle from "../assets/whiteTriangle.svg";
 
-export default function ContactPage() {
+export default function ContactPageMobile() {
   return (
     <div
       style={{
@@ -16,53 +16,34 @@ export default function ContactPage() {
         background: "#284B63",
       }}
     >
-      <p style={{ fontSize: "3vw", marginBottom: 0 }}>contact us</p>
-      <p style={{ fontSize: "2vw" }}>We will highly appreciate it</p>
+      <p style={{ fontSize: "2rem", marginBottom: 0 }}>contact us</p>
+      <p style={{ fontSize: "1.2rem" }}>We will highly appreciate it</p>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
+            width: "100%",
+            flexDirection: "column-reverse",
             justifyContent: "space-evenly",
           }}
         >
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-              <img src={MapPin} alt="Map Pin" style={{ height: "2.2vw" }} />
-              <p style={{ fontSize: "1.4vw" }}>address</p>
+              <img src={MapPin} alt="Map Pin" style={{ height: "2rem" }} />
+              <p style={{ fontSize: "1.2rem" }}>address</p>
             </div>
             <p style={{ paddingLeft: "3rem" }}>
               Kungsportsavenyen 38 <br /> 411 36 Göteborg <br /> Sweden <br />
               <br /> +46 70 22 32 081
             </p>
           </div>
+
           <div
             style={{
+              marginBottom: "2%",
               display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-            }}
-          >
-            <img src={Twitter} alt="Twitter" style={{ height: "1.4rem" }} />
-            <img src={Instagram} alt="Instagram" style={{ height: "2rem" }} />
-            <img src={GitHub} alt="Github" style={{ height: "1.4rem" }} />
-            <img src={LinkedIn} alt="Linked In" style={{ height: "1.4rem" }} />
-          </div>
-        </div>
-        <div
-          style={{
-            width: "50%",
-            marginBottom: "2%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              columnGap: "5%",
-              height: "2.5rem",
+              flexDirection: "column",
+              gap: "2rem",
             }}
           >
             <input
@@ -71,7 +52,6 @@ export default function ContactPage() {
                 border: 0,
                 fontFamily: "BAHNSCHRIFT",
                 fontSize: "1.1rem",
-                width: "calc(50% - 1rem)",
               }}
             />{" "}
             <input
@@ -80,18 +60,14 @@ export default function ContactPage() {
                 border: 0,
                 fontFamily: "BAHNSCHRIFT",
                 fontSize: "1.1rem",
-                width: "calc(50% - 1rem)",
               }}
             />
-          </div>
-          <div style={{ display: "flex", columnGap: "5%", height: "2.5rem" }}>
             <input
               placeholder="Telephone"
               style={{
                 border: 0,
                 fontFamily: "BAHNSCHRIFT",
                 fontSize: "1.1rem",
-                width: "calc(50% - 1rem)",
               }}
             />{" "}
             <input
@@ -100,29 +76,36 @@ export default function ContactPage() {
                 border: 0,
                 fontFamily: "BAHNSCHRIFT",
                 fontSize: "1.1rem",
-                width: "calc(50% - 1rem)",
               }}
             />
-          </div>
-          <textarea
-            placeholder="Message"
-            rows={10}
-            style={{ border: 0, fontFamily: "BAHNSCHRIFT", fontSize: "1.1rem" }}
-          />
-          <div
-            style={{ width: "100%", display: "flex", justifyContent: "right" }}
-          >
-            <button
+            <textarea
+              placeholder="Message"
+              rows={10}
               style={{
-                borderRadius: 0,
                 border: 0,
-                height: "2.5vw",
-                width: "10vw",
                 fontFamily: "BAHNSCHRIFT",
+                fontSize: "1.1rem",
+              }}
+            />
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "right",
               }}
             >
-              SEND
-            </button>
+              <button
+                style={{
+                  borderRadius: 0,
+                  border: 0,
+                  height: "2rem",
+                  width: "6rem",
+                  fontFamily: "BAHNSCHRIFT",
+                }}
+              >
+                SEND
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -132,18 +115,21 @@ export default function ContactPage() {
           justifyContent: "space-between",
         }}
       >
-        <div style={{ display: "flex" }}>
-          <p style={{ paddingRight: "2vw" }}>2022 © akit </p>
-          <p>all rights reserved</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            gap: "1rem",
+            paddingLeft: "3rem",
+          }}
+        >
+          <img src={Twitter} alt="Twitter" style={{ height: "1.4rem" }} />
+          <img src={Instagram} alt="Instagram" style={{ height: "2rem" }} />
+          <img src={GitHub} alt="Github" style={{ height: "1.4rem" }} />
+          <img src={LinkedIn} alt="Linked In" style={{ height: "1.4rem" }} />
         </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={Triangle}
-            alt="Graphic element"
-            style={{ paddingRight: "1rem", height: "1rem" }}
-          />
-          <p>back to top</p>
-        </div>
+        <p>back to top</p>
       </div>
     </div>
   );

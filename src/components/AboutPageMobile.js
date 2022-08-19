@@ -1,7 +1,7 @@
 import AboutPic from "../assets/aboutpic.svg";
 import Triangle from "../assets/blueTriangle.svg";
 
-export default function AboutPage() {
+export default function AboutPageMobile() {
   return (
     <div
       style={{
@@ -28,7 +28,7 @@ export default function AboutPage() {
         src={AboutPic}
         alt="Our office"
         style={{
-          width: "101vw",
+          width: "100vw",
           marginLeft: "-.2rem",
           position: "absolute",
         }}
@@ -53,13 +53,13 @@ export default function AboutPage() {
             zIndex: 4,
           }}
         >
-          <img src={Triangle} alt="A triangle" style={{ height: "3rem" }} />
-          <p style={{ fontSize: "3rem" }}>who we are</p>
+          <img src={Triangle} alt="A triangle" style={{ height: "1.5rem" }} />
+          <p style={{ fontSize: "1.5rem" }}>who we are</p>
         </div>
         <p
           style={{
             color: "#284B63",
-            fontSize: "2rem",
+            fontSize: "1rem",
             paddingLeft: "9.5vw",
             zIndex: 4,
           }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <p
           style={{
             color: "#000000",
-            fontSize: "1.4rem",
+            fontSize: ".8rem",
             maxWidth: "50vw",
             paddingLeft: "9.5vw",
             zIndex: 4,
