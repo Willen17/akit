@@ -3,7 +3,6 @@ import Twitter from "../assets/twitter.svg";
 import Instagram from "../assets/instagram.svg";
 import GitHub from "../assets/github.svg";
 import LinkedIn from "../assets/linkedin.svg";
-import Triangle from "../assets/whiteTriangle.svg";
 
 export default function ContactPageMobile() {
   return (
