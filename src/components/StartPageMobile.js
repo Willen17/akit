@@ -1,6 +1,5 @@
 import ZakitWhite from "../assets/zakitWhite.svg";
 import WhiteTriangle from "../assets/whiteTriangle.svg";
-import { useState, useEffect } from "react";
 
 export default function StartPageMobile() {
   return (

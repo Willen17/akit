@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import AboutPage from "./AboutPage";
+import ContactPage from "./Contact";
 import DividerPictures from "./DividerPictures";
 import Header from "./Header";
+import ProductPage from "./ProductPage";
 import StartPage from "./StartPage";
 import StartPageMobile from "./StartPageMobile";
 
@@ -21,6 +23,8 @@ export default function Layout() {
       {isMobile ? <StartPageMobile /> : <StartPage />}
       <AboutPage />
       <DividerPictures />
+      <ProductPage />
+      <ContactPage />
     </div>
   );
 }
